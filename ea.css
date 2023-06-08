@@ -2,6 +2,9 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}body{
+    font-family: sans-serif;
+    background-color: dedede;
 }
 header .dark-header{
     background-color: black;
@@ -18,6 +21,7 @@ header .main-nav{
     display: flex;
     padding: 20px 20px;
     gap: 30px;
+    background-color: white;
 }
 header .main-nav .humbugger-menu{
     display: flex;
@@ -86,19 +90,33 @@ header .main-nav .nav-list .sub-nav-heading{
     padding-right: 25px;
     padding-top: 8px;
     padding-bottom: 8px;
-    /* display: block; */
+    display: block;
 }
+/* header .main-nav .nav-list .sub-nav-heading:hover .rotate-element,
+header .main-nav .nav-list .sub-nav-heading:hover .rotate-element:hover {
+  transform: rotate(180deg);
+} */
+
 header .main-nav .nav-list .sub-nav-heading:hover{
     color: #da292a;
     cursor: pointer;
+}
+header .main-nav .nav-list .sub-nav-heading:hover .rotate-element{
+    transform: rotate(-90deg);
+}
+header .main-nav .nav-list .sub-nav-heading:hover+ .sub-nav {
+    display: block;
+}
 
-}
-header .main-nav .nav-list .sub-nav-heading:hover+ .sub-nav{
-    display: block;
-}
-header .main-nav .nav-list .sub-nav:hover{
-    display: block;
-}
+/* .rotate-element {
+    display: inline-block;
+    transition: transform 0.3s;
+  }
+  */
+  /* .rotate-element:hover { */
+    /* transform: rotate(-180deg);
+    transition: transform 0.3s;
+  } */
 /* hero section */
 .hero .hero-img-desktop{
     width: 100%;
@@ -141,4 +159,97 @@ header .main-nav .nav-list .sub-nav:hover{
 		transform: rotateX(0deg);
         transform-origin: top;
 	}
+}
+/* featured games section */
+.featured > h2{
+    text-align: center;
+    font-size: 40px;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+.featured .games{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0px 100px;
+}
+.featured .games > a{
+    width: 30%;
+    height: 250px;
+    margin: 10px;
+    display: block;
+    background-image: url(./images/the-sims-4-keyart.jpg.adapt.crop1x1.767p.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-decoration:none;
+}
+.featured .games > #jedi{
+    background-image: url(images/star-wars-jedi-survivor-keyart.jpg.adapt.crop1x1.767p.jpg);
+}
+.featured .games > #pga-tour{
+    background-image: url(images/ea-sports-pgatour-keyart.jpg.adapt.crop1x1.767p.jpg);
+} 
+.featured .games > #fifa{
+    background-image: url(images/eas-fifa22-gen5-ue-keyart-horz-f23logo.jpg.adapt.crop1x1.767p.jpg);
+}
+.featured .games > #madden{
+    background-image: url(images/madden-23-keyart.jpg.adapt.crop1x1.767p.jpg);
+}
+.featured .games > #apex{
+    background-image: url(images/apex-legends-keyart.jpg.adapt.crop1x1.767p.jpg);
+}
+.featured .games .game{
+    background-color: rgba(0, 0, 0, 0.4);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: all 0.3s ease-in-out;
+}
+
+.featured .games .game img{
+    width: 30%;
+    transition: all 0.3s ease-in-out;
+    transform: translateY(35px);
+}
+.featured .games .game p{
+    
+    color: white;
+    font-size: 18px;
+    display: none;
+}
+.featured .games .game:hover{
+
+    background: linear-gradient(
+        to right,
+         rgb(65, 57, 209,0.8),
+          rgba(221,43,43,0.8) );
+}
+.featured .games .game:hover p{
+    display: block;
+}
+.featured .games .game:hover img{
+    transform: translateY(-27px);
+}
+.updates >h2{
+    text-align: center;
+    font-size: 40px;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+.updates .update-nav{
+    border-bottom: 1px solid #d3d3d3;
+    padding: 0 80px;
+    margin-bottom: 20px;
+    display: flex;
+}
+.updates .update-nav a{
+    text-decoration: none;
+    padding: 16px 20px;
+    display: block;
+}
+.updates .update-nav a:hover{
+    background-color: #d3d3d3;
+    border-bottom: 2px solid peru;
 }
